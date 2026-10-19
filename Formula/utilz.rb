@@ -9,12 +9,11 @@ class Utilz < Formula
   # checks the tag's commit against the revision at install and stops on a
   # mismatch, so a wrong revision fails loudly rather than silently.
   url "https://github.com/matthewsinclair/utilz.git",
-      tag:      "2.14.0",
-      revision: "069e0f38a9363bc2cda1d4e75ccc8b486d19924e"
+      tag:      "2.14.1",
+      revision: "43fca620d051734516f9c2b84083425383b7cd3f"
   license "MIT"
 
   depends_on "rust" => :build
-  depends_on :macos
   # The framework's one dependency to start. Each utility's own dependencies
   # are reported by utilz doctor, with install lines, rather than installed
   # here for every utility at once (D3).
@@ -36,6 +35,9 @@ class Utilz < Formula
         utilz doctor
       utilz upgrade, relink and use refuse inside this install: upgrade it
       with brew upgrade utilz.
+      On Linux, macoz and menuz's app need macOS, and arngz's apply, diff and
+      discover need macOS and Hammerspoon; utilz doctor names what this
+      machine lacks.
     EOS
   end
 
