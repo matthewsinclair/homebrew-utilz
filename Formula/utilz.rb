@@ -11,8 +11,8 @@ class Utilz < Formula
   # commit against the revision at install and stops on a mismatch, so a wrong
   # revision fails loudly rather than silently.
   url "https://github.com/matthewsinclair/utilz.git",
-      tag:      "2.14.4",
-      revision: "722f532bef8a1e09855932a7c6c6884b20940665"
+      tag:      "2.14.5",
+      revision: "4c1fa5f1fe69ff85d112523b6f927e34f41a8a64"
   license "MIT"
 
   depends_on "rust" => :build
